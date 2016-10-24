@@ -18,6 +18,7 @@ namespace BasicChat
         public void Add(T key, string connectionId)
         {
             var aa = "";
+            var aa1 = "";
             lock (_connections)
             {
                 HashSet<string> connections;
