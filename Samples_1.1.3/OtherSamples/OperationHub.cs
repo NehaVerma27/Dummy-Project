@@ -19,8 +19,10 @@ namespace WebApplication35
             int operationId = Interlocked.Increment(ref _operationId);
             var cts = new CancellationTokenSource();
 
+
             // Add it to the list
             _pendingOperations.TryAdd(operationId, cts);
+
 
             DoSomeLongRunningTask(operationId, cts);
 
